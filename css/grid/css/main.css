@@ -10,14 +10,14 @@ body {
   line-height: 1.5;
 }
 
-.capcalera {
+.page-header {
   padding: 16px;
   background: #555;
   color: white;
   text-align: center;
 }
 
-.contingut {
+.content {
   max-width: 800px;
   margin: 24px auto;
   padding: 16px;
@@ -34,7 +34,7 @@ h2 {
   font-size: 20px;
 }
 
-.imatge {
+.image {
   width: 300px;
   max-width: 100%;
   height: auto;
