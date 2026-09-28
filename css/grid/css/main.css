@@ -10,27 +10,16 @@ body {
   line-height: 1.5;
 }
 
-#container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.capcalera,
-.imatges {
-  grid-column: 1 / -1;
-}
-
 .capcalera {
   padding: 16px;
   background: #555;
   color: white;
+  text-align: center;
 }
 
 .contingut {
+  max-width: 800px;
+  margin: 24px auto;
   padding: 16px;
   background: white;
   border: 1px solid #ccc;
@@ -45,23 +34,14 @@ h2 {
   font-size: 20px;
 }
 
-.galeria {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-}
-
 .imatge {
-  width: 100%;
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  margin-right: 12px;
 }
 
 a {
   color: #405b48;
 }
 
-@media (max-width: 600px) {
-  #container,
-  .galeria {
-    grid-template-columns: 1fr;
-  }
-}
