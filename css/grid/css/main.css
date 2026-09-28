@@ -1,74 +1,93 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
+body {
+  background-color: #f1f3f0;
+  color: #29362f;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #d9edf7;
-  color:white;
-  font-size: 22px;;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-#container{
-  display:grid;
-  border: 1px solid red;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: calc(33.33vh - 10px) calc(33.33vh - 10px) calc(33.33vh - 10px);
-  grid-column-gap: 10px;
-  grid-row-gap: 10px;
+#container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 18px;
 }
 
-#container .celda1{
-  padding: 9px;
-  background-color:#a60573;
-  border-radius: 5px;
+.capcalera,
+.imatges {
+  grid-column: 1 / -1;
 }
 
-#container .celda2{
-  padding: 9px;
-  background-color:#a0a1a5;
-  border-radius: 5px;
+.capcalera {
+  padding: 20px 24px;
+  background-color: #46594c;
+  border-radius: 4px;
+  color: #fff;
 }
 
-#container .celda3{
-  padding: 9px;
-  background-color:#97bc27;
-  border-radius: 5px;
+.contingut {
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #d8ded9;
+  border-radius: 4px;
 }
 
-#container .celda4{
-  padding: 9px;
-  background-color:#ff9800;
-  border-radius: 5px;
+h1 {
+  font-size: 28px;
 }
 
-#container .celda5{
-  padding: 9px;
-  background-color:#ff3700;
-  border-radius: 5px;
+h2 {
+  margin: 0 0 10px;
+  color: #35483b;
+  font-size: 20px;
 }
 
-#container .celda6{
-  padding: 9px;
-  background-color:#459800;
-  border-radius: 5px;
+.contingut h2:not(:first-child) {
+  margin-top: 22px;
 }
 
-#container .celda7{
-  padding: 9px;
-  background-color:#ff98ff;
-  border-radius: 5px;
+p,
+ul {
+  margin-bottom: 12px;
 }
 
-#container .celda8{
-  padding: 9px;
-  background-color:#023300;
-  border-radius: 5px;
+ul {
+  padding-left: 22px;
 }
 
-#container .celda9{
-  padding: 9px;
-  background-color:#0f2255;
-  border-radius: 5px;
+a {
+  color: #42654e;
+}
+
+a:hover {
+  color: #263b2d;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.imatge {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+@media (max-width: 680px) {
+  #container,
+  .galeria {
+    grid-template-columns: 1fr;
+  }
 }
