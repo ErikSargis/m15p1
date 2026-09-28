@@ -1,91 +1,69 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+/* CSS: grid simple, colores neutros y adaptación a móvil. */
 body {
-  background-color: #f1f3f0;
-  color: #29362f;
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
-  line-height: 1.6;
+  margin: 0;
+  background: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
 }
 
 #container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  max-width: 1100px;
+  /* Dos columnas iguales para ordenar las secciones. */
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 24px 18px;
+  padding: 20px;
 }
 
 .capcalera,
 .imatges {
+  /* La cabecera y la galería ocupan las dos columnas. */
   grid-column: 1 / -1;
 }
 
 .capcalera {
-  padding: 20px 24px;
-  background-color: #46594c;
-  border-radius: 4px;
-  color: #fff;
+  padding: 16px;
+  background: #555;
+  color: white;
 }
 
 .contingut {
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid #d8ded9;
-  border-radius: 4px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ccc;
 }
 
-h1 {
-  font-size: 28px;
+h1,
+h2 {
+  margin-top: 0;
 }
 
 h2 {
-  margin: 0 0 10px;
-  color: #35483b;
   font-size: 20px;
-}
-
-.contingut h2:not(:first-child) {
-  margin-top: 22px;
-}
-
-p,
-ul {
-  margin-bottom: 12px;
-}
-
-ul {
-  padding-left: 22px;
-}
-
-a {
-  color: #42654e;
-}
-
-a:hover {
-  color: #263b2d;
 }
 
 .galeria {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
 
 .imatge {
-  display: block;
   width: 100%;
-  aspect-ratio: 3 / 2;
-  border-radius: 3px;
-  object-fit: cover;
 }
 
-@media (max-width: 680px) {
+a {
+  color: #405b48;
+}
+
+@media (max-width: 600px) {
+  /* En móvil, las columnas se colocan una debajo de otra. */
   #container,
   .galeria {
     grid-template-columns: 1fr;
