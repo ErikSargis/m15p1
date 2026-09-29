@@ -13,7 +13,7 @@ body {
     font-family: 'Lexend', sans-serif;
 }
 .page-header {
-    padding: 26px 20px;
+    padding: 25px 20px;
     background: var(--blue);
     border-bottom: 13px solid var(--gold);
     color: white;
