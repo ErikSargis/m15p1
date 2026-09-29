@@ -73,7 +73,98 @@ h2 {
 
 a {
     color: var(--blue);
-    transition: color 0.2s ease, transform 0.2s ease;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.music-section {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 3px solid var(--gold);
+}
+
+.music-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: stretch;
+}
+
+.song-card,
+.music-side {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.song-card {
+    padding: 16px;
+    background: #f8f9f7;
+    border: 1px solid rgba(75, 82, 124, 0.15);
+    border-radius: 8px;
+}
+
+.song-card h3,
+.music-side h3 {
+    margin: 0 0 12px;
+    color: var(--blue);
+}
+
+.song-embed {
+    width: 100%;
+    border: 0;
+    display: block;
+}
+
+.song-embed--video {
+    aspect-ratio: 16 / 9;
+    min-height: 300px;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.music-side {
+    background: #f4f0e8;
+    border-left: 4px solid var(--gold);
+    padding: 16px;
+    justify-content: space-between;
+}
+
+.mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.mini-table th,
+.mini-table td {
+    padding: 6px 4px;
+    border-bottom: 1px solid rgba(75, 82, 124, 0.15);
+    text-align: left;
+}
+
+.mini-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 14px;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 10px rgba(74, 82, 124, 0.2);
+}
+
+.mini-button:hover {
+    background: #3b4464;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(74, 82, 124, 0.25);
 }
 
 a:hover {
@@ -92,6 +183,10 @@ a:hover {
     .lists {
         padding-left: 0;
         border-left: 0;
+    }
+
+    .music-layout {
+        grid-template-columns: 1fr;
     }
 
     .content {
