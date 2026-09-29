@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La meva pàgina personal</title>
+    <style>
+        :root {
+            --tinta: #27332f;
+            --verd: #17463f;
+            --verd-suau: #356b5d;
+            --daurat: #c49a55;
+            --fons: #f2f4ef;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--fons);
+            background-image: repeating-linear-gradient(135deg, transparent 0 18px, rgba(23, 70, 63, 0.025) 18px 19px);
+            color: var(--tinta);
+            font-family: 'Lexend', sans-serif;
+        }
+
+        header {
+            padding: 38px 20px 34px;
+            background: linear-gradient(115deg, #173f3b, #286155);
+            border-bottom: 5px solid var(--daurat);
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            line-height: 1.2;
+        }
+
+        main {
+            width: min(840px, calc(100% - 32px));
+            margin: -12px auto 48px;
+            padding: 38px 48px;
+            background-color: white;
+            border-top: 4px solid var(--daurat);
+            box-shadow: 0 12px 32px rgba(39, 51, 47, 0.08);
+        }
+
+        h2 {
+            margin: 34px 0 12px;
+            padding-left: 12px;
+            border-left: 3px solid var(--daurat);
+            color: var(--verd);
+            font-size: 22px;
+            line-height: 1.35;
+        }
+
+        p {
+            margin: 0 0 16px;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        ul {
+            padding-left: 24px;
+            line-height: 1.9;
+        }
+
+        li::marker {
+            color: var(--daurat);
+        }
+
+        a {
+            color: var(--verd-suau);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #a14f3d;
+        }
+
+        img {
+            width: 100%;
+            max-width: 100%;
+            height: 240px;
+            border-radius: 3px;
+            object-fit: cover;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            margin: 16px 0 24px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 30px 16px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+                padding: 28px 22px;
+            }
+
+            div {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            img {
+                height: 210px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diari 2026</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>El meu estiu</h2>
+            <p>
+                Ha sigut un molt bon estiu. He aprofitat el temps per fer pinya amb la família i els amics,
+                he anat a la platja a desconnectar i m'he clavat uns quants llibres que m'han aportat molt.
+                Objectius complerts.
+            </p>
+
+            <h2>Els meus plans per Nadal</h2>
+            <p>
+                Per Nadal tinc pensat desconnectar de la rutina, seure a taula sense mirar el rellotge i gaudir
+                de debò del caliu de la família. Tinc ganes d'aquelles sobretaules llargues que s'allarguen amb
+                neules, torrons i converses tranquil·les; de retrobar-me amb els amics per fer unes quantes
+                partides a algun joc de taula, riure una bona estona i compartir una tassa calenta mentre a fora
+                es nota el fred d'hivern.
+            </p>
+        </section>
+
+        <section>
+            <h2>Compres que vull fer</h2>
+            <ul>
+                <li><a href="https://www.macron.com/media/catalog/product/cache/7854776c5a059fa4314600f243e72018/8/a/8a8d57eff2475db1f839011a8b6bedbf600043490001.jpg" target="_blank">Camisa de la selecció</a></li>
+                <li><a href="https://www.casio.com/content/dam/casio/product-info/locales/es/es/timepiece/product/watch/E/EF/EFV/efv-160d-4av/assets/EFV-160D-4AV.png.transform/main-visual-pc/image.png" target="_blank">Rellotge</a></li>
+                <li><a href="https://images.asics.com/is/image/asics/1011C160_003_SL_LT_GLB?$sfcc-product$" target="_blank">Sabates</a></li>
+            </ul>
+
+            <h2>Pàgines preferides</h2>
+            <ul>
+                <li><a href="https://www.ufc.com" target="_blank">UFC</a></li>
+                <li><a href="https://www.amazon.es/" target="_blank">Amazon</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Imatges que m'agraden</h2>
+            <div>
+                <img src="../img/Khor-Virap-church-with-Ararat-Mountain-in-the-background-Armenia-1200x853.jpg" alt="Khor Virap">
+                <img src="../img/SF.jpg" alt="Sagrada Familia">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
