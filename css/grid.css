@@ -151,6 +151,15 @@ a {
     text-align: left;
 }
 
+.p4p-ranking th {
+    font-size: 18px;
+}
+
+.p4p-ranking {
+    width: min(100%, 680px);
+    margin: 0 auto 12px;
+}
+
 .mini-button {
     display: inline-flex;
     align-items: center;
@@ -170,10 +179,14 @@ a {
 .mini-button:hover {
     background: #3b4464;
     transform: translateY(-1px);
-    box-shadow: 0 6px 14px rgba(74, 82, 124, 0.25);
+    box-shadow: 0 -14px 10px rgba(74, 82, 124, 0.25);
 }
 
 a:hover {
+    color: #ffee00;
+}
+
+.official-rankings-link:hover {
     color: #a14f3d;
 }
 
