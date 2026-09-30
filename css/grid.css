@@ -51,7 +51,7 @@ body {
 
 .gallery {
     display: grid;
-    gap: 16px;
+    gap: 40px;
     width: 100%;
     max-width: 260px;
 }
@@ -92,7 +92,7 @@ a {
 .music-layout {
     display: grid;
     grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
-    gap: 20px;
+    gap: 25px;
     align-items: stretch;
 }
 
